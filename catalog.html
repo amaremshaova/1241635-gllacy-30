@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Глейси</title>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="img/index/Лого.svg" alt="Логотип">
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <a>Каталог</a>
+                    </li>
+                    <li>
+                        <a>Доставка и оплата</a>
+                    </li>
+                    <li>
+                        <a>О компании</a>
+                    </li>
+                </ul>
+                <a href="#">Поиск</a>
+                <a href="#">Вход</a>
+                <a href="#">Корзина</a>
+            </nav>
+            <p>с 10 до 20, ежедневно</p>
+            <p>8 812 450-25-25</p>
+        </header>
+        <main>
+            <h1>Cливочное мороженое</h1>
+
+            <ul>
+                <li>
+                    <a href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a href="#">Каталог</a>
+                </li>
+                <li>
+                    Сливочное
+                </li>
+            </ul>
+
+            <section>
+                <h2>Фильтр товаров</h2>
+
+                <form method="get" action="https://echo.htmlacademy.ru">
+
+                    <fieldset>
+                        <legend>Сортировка:</legend>
+                        <select>
+                            <option>По популярности</option>
+                            <option>Сначала недорогие</option>
+                            <option>Сначала дорогие</option>
+                            <option>По жирности</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Цена:
+                            <span>100</span>
+                            ₽ -
+                            <span>500</span>
+                            ₽</legend>
+                        <input type="range" min="0" max="600" step="1" value="50">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Жирность</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="fat_content-group" id="filter-0%">
+                                <label for="filter-0%">0 %</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="fat_content-group" id="filter-10%">
+                                <label for="filter-10%">до 10 %</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="fat_content-group" id="filter-30%">
+                                <label for="filter-30%">до 30 %</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="fat_content-group" id="filter-30%+">
+                                <label for="filter-30%+">выше 30 %</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Наполнители:</legend>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="сhocolate" id="filter-chocolate" checked="checked">
+                                <label for="filter-chocolate">шоколадные</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    name="powdered sugar"
+                                    id="filter-powdered_sugar"
+                                    checked="checked">
+                                <label for="filter-powdered_sugar">сахарные присыпки</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="fruits" id="filter-fruits">
+                                <label for="filter-fruits">фрукты</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="syrups" id="filter-syrups">
+                                <label for="filter-syrups">сиропы</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="jams" id="filter-jams">
+                                <label for="filter-jams">джемы</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit">Применить</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Список мороженого</h2>
+                <ul>
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Index/Хит_1.jpg"
+                                width="200"
+                                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                            <span>310 ₽/кг</span>
+                            <figcaption>Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Index/Хит_2.png"
+                                width="200"
+                                alt="Сливочно-кофейное с кусочками шоколада">
+                            <span>380 ₽/кг</span>
+                            <figcaption>Сливочно-кофейное с кусочками шоколада</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Index/Хит_3.png"
+                                width="200"
+                                alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                            <span>355 ₽/кг</span>
+                            <figcaption>Сливочно-клубничное с присыпкой из белого шоколада</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Index/Хит_4.png"
+                                width="200"
+                                alt="Сливочное крем-брюле с карамельной подливкой">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочное крем-брюле с карамельной подливкой</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_1.png"
+                                width="200"
+                                alt="Сливочное с брусничным джемом">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочное с брусничным джемом</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_2.png"
+                                width="200"
+                                alt="Сливочно-черничное с цельными ягодами черники">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочно-черничное с цельными ягодами черники</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_3.png"
+                                width="200"
+                                alt="Сливочно-лимонное с карамельной присыпкой">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочно-лимонное с карамельной присыпкой</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_4.png"
+                                width="200"
+                                alt="Сливочное с шоколадной стружкой">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочное с шоколадной стружкой</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_5.png"
+                                width="200"
+                                alt="Сливочно-ванильное с кусочками шоколада">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочно-ванильное с кусочками шоколада</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_6.png"
+                                width="200"
+                                alt="Сливочное с ментоловым сиропом">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочное с ментоловым сиропом</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_7.png"
+                                width="200"
+                                alt="Сливочное с кусочками черного шоколада">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочное с кусочками черного шоколада</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+
+                    <li>
+                        <figure>
+                            <img
+                                src="img/Catalog/Product_8.png"
+                                width="200"
+                                alt="Сливочное с мятным сиропом">
+                            <span>415 ₽/кг</span>
+                            <figcaption>Сливочное с мятным сиропом</figcaption>
+                        </figure>
+                        <a href="#">Быстрый просмотр</a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">></a>
+                    </li>
+                </ul>
+
+            </section>
+        </main>
+        <footer>
+            <section>
+                <h2>Как до нас добраться</h2>
+                <!-- Здесь будет карта -->
+                <p>
+                    <img src="" alt="">
+                </p>
+                <div>
+                    <p>Адрес главного офиса и офлайн-магазина:
+                        <span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
+                    </p>
+                    <p>Для заказов по телефону
+                        <a href="tel:+78124502525">+7 (812) 450-25-25</a>
+                        (c 10 до 20 ежедневно)
+                    </p>
+                    <a href="#">Форма обратной связи</a>
+                </div>
+            </section>
+            <section>
+                <h2>Давайте дружить</h2>
+                <ul>
+
+                    <li>
+                        <a href="#">Фейсбук</a>
+                    </li>
+                    <li>
+                        <a href="#">Вконтакте</a>
+                    </li>
+                    <li>
+                        <a href="#">Инстаграм</a>
+                    </li>
+                    <li>
+                        <a href="#">Твиттер</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Служебная информация</h2>
+                <ul>
+                    <li>
+                        <a href="#">Для поставщиков</a>
+                    <li>
+                    <li>
+                        <a href="#">О производстве</a>
+                    </li>
+                    <li>
+                        <a href="#">Наши документы</a>
+                    </li>
+                    <li>
+                        <a href="#">Экологические стандарты</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Копирайт</h2>
+                <p>
+                    <a href="https://up.htmlacademy.ru/">
+                        <img src="img/Index/Лого_академии.png" alt="Логотип академии">
+                    </a>
+                    Сделано в HTML Academy &copy; 2019
+                </p>
+            </section>
+        </footer>
+
+        <section>
+            <h2>Корзина</h2>
+            <ul>
+                <li>
+                    <button>Удалить</button>
+                    <img src="" alt="">
+                    <a href="#">Пломбир с апельсиновым джемом</a>
+                    <p>
+                        1.5 кг x
+                        <span>200 руб.</span>
+                        300 руб.</p>
+                </li>
+                <li>
+                    <button>Удалить</button>
+                    <img src="" alt="">
+                    <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                    <p>
+                        1.5 кг x
+                        <span>300 руб.</span>
+                        450 руб.
+                </li>
+            </ul>
+            <p>Итого: <span>750 руб.</span></p>
+            <a href="#">Оформить заказ</a>
+        </section>
+    </body>
+</html>
