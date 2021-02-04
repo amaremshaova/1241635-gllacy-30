@@ -39,7 +39,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
@@ -48,11 +48,22 @@ body {
     font-style: normal;
     color: var(--basic-white);
 
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+
+    padding-left: 27px;
+    padding-right: 27px;
+    background-color: var(--background-first);
+    width: 1200px;
+}
+
+.page {
+    height: 100%;
 }
 
 .index-body {
-    background-color: var(--background-first);
-}
+    }
 
 .button {
     background: linear-gradient(180deg, var(--btn-color-gradient-first)0%, var(--btn-color-gradient-second) 100%);
@@ -64,11 +75,13 @@ body {
 }
 
 .button:hover {
-    background: linear-gradient(0deg, var(--background-hover), var(--background-hover)), linear-gradient(180deg,var(--btn-color-gradient-first)0%, var(--btn-color-gradient-second) 100%);
+    background: linear-gradient(0deg, var(--background-hover), var(--background-hover)),
+     linear-gradient(180deg,var(--btn-color-gradient-first)0%, var(--btn-color-gradient-second) 100%);
 }
 
 .button:active {
-    background: linear-gradient(0deg, var(--background-active), var(--background-active)), linear-gradient(180deg, var(--btn-color-gradient-first)0%, var(--btn-color-gradient-second) 100%);
+    background: linear-gradient(0deg, var(--background-active), var(--background-active)), 
+    linear-gradient(180deg, var(--btn-color-gradient-first)0%, var(--btn-color-gradient-second) 100%);
 }
 
 ol,
@@ -84,7 +97,18 @@ a {
 input {
     color: var(--placeholder-color);
 }
-.container h1, .authorization h2, .copyright h2, .features h2, .feedback h2, .contacts-footer h2, .social-footer h2, .products-container h2, .menu h2, .search h2, .service-info h2, .subscription h2,
+.container h1,
+.authorization h2,
+.copyright h2,
+.features h2,
+.feedback h2,
+.contacts-footer h2,
+.social h2,
+.products-container h2,
+.menu h2,
+.search h2,
+.service-info h2,
+.subscription h2,
 
 /* catalog */
 .basket-header h2,
@@ -94,6 +118,17 @@ input {
 }
 
 /* Main navigation */
+
+.nav-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.main-navigation {
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+}
 
 .site-nav-link {
     font-weight: 700;
@@ -109,20 +144,36 @@ input {
     line-height: 16px;
 }
 
+.working-info-container {
+    width: 100%;
+    display: grid;
+    justify-content: end;
+    text-align: end;
+    row-gap: 8px;
+}
+
 .working-hours {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+    margin: 0;
+
 }
 
 .phone {
     font-weight: 700;
     font-size: 22px;
     line-height: 24px;
+    margin: 0;
 }
 
 /* Menu */
-
+.authorization,
+.feedback,
+.menu,
+.search {
+    display: none;
+}
 .menu-link {
     color: var(--basic-black);
     font-size: 14px;
@@ -154,12 +205,21 @@ input {
 
 .container {
     width: 100%;
+    display: grid;
+    row-gap: 40px;
+    margin-top: 41px;
+}
+
+.sliders-container {
+    display: grid;
+    justify-content: space-around;
 }
 
 .slider-header {
     font-weight: 700;
     font-size: 60px;
     line-height: 60px;
+    text-align: center;
 }
 
 .slider-button {
@@ -167,6 +227,13 @@ input {
     line-height: 44px;
     width: 261px;
     height: 62px;
+    margin: auto;
+}
+
+.slider-item {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
 }
 
 .slider-item:nth-child(2) {
@@ -178,6 +245,11 @@ input {
 }
 
 /* Promotions */
+.banners-container {
+    display: grid;
+    column-gap: 26px;
+    grid-template-columns: repeat(2, 560px);
+}
 
 .promotion {
     width: 560px;
@@ -212,6 +284,15 @@ input {
 
 /* Hits */
 
+.products-list {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    column-gap: 26px;
+    grid-template-columns: repeat(4, 267px);
+
+}
+
 .open-view-button {
     display: none;
 }
@@ -219,6 +300,7 @@ input {
 .product {
     width: 267px;
     border-radius: 50%;
+    margin: 0;
 }
 
 .price {
@@ -250,6 +332,7 @@ input {
 }
 
 .features-main-description {
+    margin: 0;
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
@@ -261,6 +344,12 @@ input {
 }
 
 /* News */
+
+.news-container {
+    display: grid;
+    column-gap: 26px;
+    grid-template-columns: repeat(2, 560px);
+}
 
 .news {
     background-image: url("../img/index/strawberry_background.jpg");
@@ -304,14 +393,23 @@ input {
     width: 548px;
     height: 210px;
     border-radius: 16px;
+    margin: 5px 6px;
 }
 
 .subscription-text {
     font-size: 16px;
-    line-height: 22px;
+    margin: 0;
 }
 
 /* Footer */
+
+.main-footer {
+    margin-top: 40px;
+}
+
+.map {
+    display: none;
+}
 
 .contacts-container {
     width: 303px;
@@ -321,10 +419,20 @@ input {
     color: var(--basic-black);
 }
 
+.contacts-address {
+    margin: 0;
+}
+
 .contacts {
     font-weight: 700;
     line-height: 24px;
     color: var(--basic-black);
+}
+
+.social-footer {
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
 }
 
 .social-label {
