@@ -56,6 +56,8 @@ body {
     padding-right: 27px;
     background-color: var(--background-first);
     width: 1200px;
+
+    box-sizing: border-box;
 }
 
 .page {
