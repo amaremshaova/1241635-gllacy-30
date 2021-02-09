@@ -86,9 +86,9 @@
         <main class="container-index">
             <h1>Интернет-магазин мороженого "Глэйси"</h1>
             <div class="sliders-container">
-                <div type="radio" name="point" checked="checked" class="radio-checked"></div>
-                <div type="radio" name="point"></div>
-                <div type="radio" name="point"></div>
+                <div class="radio-checked"></div>
+                <div ></div>
+                <div ></div>
                 <div class="slider">
                     <div class="slider-item ">
                         <div class="slider-img">
@@ -121,14 +121,22 @@
                     <h2 class="promotion-header">Малинка даром!</h2>
                     <p class="promotion-text">При покупке 2 кг любого фруктового мороженого, добавим
                         в ваш заказ банку малинового варенья бесплатно</p>
-                    <a class="button promotion-button" href="#">Хочу варенье!</a>
+                        <div class="set-jam-button-container">
+                    <div class="button set-jam-button">
+                    <a class=" promotion-button " href="#">Хочу варенье!</a>
+                </div>
+            </div>
                 </section>
 
                 <section class="promotion promotion-second">
                     <h2 class="promotion-header">Шоколадки даром!</h2>
                     <p class="promotion-text">При покупке 2 кг пломбира, добавим в ваш заказ
                         упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
-                    <a class="button promotion-button" href="#">Хочу шоколадки!</a>
+                        <div class=" set-chocolate-button-container">
+                    <div class="button set-chocolate-button">
+                    <a class="promotion-button" href="#">Хочу шоколадки!</a>
+                </div>
+                </div>
                 </section>
             </div>
 
@@ -138,26 +146,34 @@
                     <li class="product-item">
                         <figure class="product">
                             <img
+                            class="product-img"
                                 src="img/index/hit_1.jpg"
                                 width="267"
                                 height="267"
+                                
                                 alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                            <span class="price">310 ₽</span>
-                            <span class="kg">/кг</span>
-                            <figcaption class="product-label">Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
+                                <div class="price-kg-container">
+                                <span class="price">310 ₽</span>
+                                <span class="kg">/кг</span>
+                                </div>
+                                <figcaption class="product-label">Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
                         </figure>
+                       
                         <a class="button open-view-button" href="#">Быстрый просмотр</a>
                     </li>
 
                     <li class="product-item">
                         <figure class="product">
                             <img
+                            class="product-img"
                                 src="img/index/hit_2.jpg"
                                 width="267"
                                 height="267"
                                 alt="Сливочно-кофейное с кусочками шоколада">
+                                <div class="price-kg-container">
                             <span class="price">380 ₽</span>
                             <span class="kg">/кг</span>
+                            </div>
                             <figcaption class="product-label">Сливочно-кофейное с кусочками шоколада</figcaption>
                         </figure>
                         <a class="button open-view-button" href="#">Быстрый просмотр</a>
@@ -166,13 +182,17 @@
                     <li class="product-item">
                         <figure class="product">
                             <img
+                            class="product-img"
                                 src="img/index/hit_3.jpg"
                                 width="267"
                                 height="267"
                                 alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                            <span class="price">355 ₽</span>
-                            <span class="kg">/кг</span>
-                            <figcaption class="product-label">Сливочно-клубничное с присыпкой из белого шоколада</figcaption>
+                                <div class="price-kg-container">
+                                    <span class="price">355 ₽</span>
+                                    <span class="kg">/кг</span>
+                                </div>
+                           
+                            <figcaption class="product-label">Сливочно-клубничное<br>  с присыпкой из белого шоколада</figcaption>
                         </figure>
                         <a class="button open-view-button" href="#">Быстрый просмотр</a>
                     </li>
@@ -180,13 +200,16 @@
                     <li class="product-item">
                         <figure class="product">
                             <img
+                            class="product-img"
                                 src="img/index/hit_4.jpg"
                                 width="267"
                                 height="267"
                                 alt="Сливочное крем-брюле с карамельной подливкой">
+                                <div class="price-kg-container">
                             <span class="price">415 ₽</span>
                             <span class="kg">/кг</span>
-                            <figcaption class="product-label">Сливочное крем-брюле с карамельной подливкой</figcaption>
+                        </div>
+                            <figcaption class="product-label">Сливочное крем-брюле<br>    с карамельной подливкой</figcaption>
                         </figure>
                         <a class="button open-view-button" href="#">Быстрый просмотр</a>
                     </li>
@@ -199,22 +222,22 @@
                     офлайн-магазин по продаже мороженого собственного производства на развес</p>
                 <ul class="features-list">
                     <li class="features-item">
-                        <p class="features-text">Все наше мороженое изготавливается на собственном
+                        <p class="features-text ice-cream-text">Все наше мороженое изготавливается на собственном
                             производстве, с использованием современного оборудования и проверенных временем
                             технологий</p>
                     </li>
                     <li class="features-item">
-                        <p class="features-text">Для приготовления мороженого используются настоящие
-                            сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки
-                            произведены из натурального, экологически чистого сырья</p>
-                    </li>
-                    <li class="features-item">
-                        <p class="features-text">Закупка ингредиентов производится только у проверенных
+                        <p class="features-text cow-text">Закупка ингредиентов производится только у проверенных
                             фермерских хозяйств и компаний, с которыми нас связывает долговременное
                             сотрудничество</p>
                     </li>
                     <li class="features-item">
-                        <p class="features-text">Доставка нашего мороженого до заказчиков осуществляется
+                        <p class="features-text leaf-text">Для приготовления мороженого используются настоящие
+                            сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки
+                            произведены из натурального, экологически чистого сырья</p>
+                    </li>
+                    <li class="features-item">
+                        <p class="features-text thermometer-text">Доставка нашего мороженого до заказчиков осуществляется
                             в специальнои термопаке, который не дает мороженому растаять в пути и позволяет
                             сохранить превосходный вкус</p>
                     </li>
@@ -224,8 +247,8 @@
             <div class="news-container">
                 <article class="news">
                     <h2 class="news-header">Новое в нашем блоге</h2>
-                    <p >
-                        <a class="news-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                    <p class="news-link-container">
+                        <a class="news-link" href="#">10 способов сервировки фруктовых щербетов<br> к столу</a>
                     </p>
                 </article>
 
@@ -239,7 +262,7 @@
                             class="subscription-form"
                             action="https://echo.htmlacademy.ru"
                             method="post">
-                            <input type="email" name="email" placeholder="email@example.ru">
+                            <input  class="subscription-email-input" type="email" name="email" placeholder="email@example.ru">
                             <button class="button send-button" type="submit">Отправить</button>
                         </form>
                     </div>
@@ -256,21 +279,23 @@
                 </p>
 
                 <div class="contacts-container">
-                    <p class="contacts-address">Адрес главного офиса и офлайн-магазина:
-                        <span class="contacts">ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
+                    <p class="contacts-address">Адрес главного офиса<br> и офлайн-магазина:<br>
+                        <span class="contacts">ул. Большая Конюшенная,<br> 19/8, Санкт-Петербург</span>
                     </p>
-                    <p class="contacts-phone">Для заказов по телефону<br>
-                        <a class="contacts" href="tel:+78124502525">+7 (812) 450-25-25</a><br>
+                    <p class="contacts-phone">Для заказов по телефону:<br>
+                        <a class="contacts" href="tel:+78124502525">8 (812) 450-25-25</a><br>
                         (c 10 до 20 ежедневно)
                     </p>
-                    <a class="button feedback-button" href="#">Форма обратной связи</a>
+                    <div class="button feedback-button">
+                    <a class="" href="#">Форма обратной связи</a>
+                </div>
                 </div>
             </section>
 
             <div class="social-footer">
                 <section class="social">
                     <h2>Давайте дружить</h2>
-                    <ul>
+                    <ul class="social-list">
                         <li class="social-item">
                             <a class="social-button" href="#">
                                 <span class="social-label">Facebook</span>
@@ -298,7 +323,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li>
+                        <li class="social-item">
                             <a class="social-button" href="#">
                                 <span class="social-label">VK</span>
                                 <svg
@@ -341,7 +366,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li>
+                        <li class="social-item">
                             <a class="social-button" href="#">
                                 <span class="social-label">Instagram</span>
                                 <svg
@@ -392,7 +417,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li>
+                        <li class="social-item">
                             <a class="social-button" href="#">
                                 <span class="social-label">Twitter</span>
                                 <svg
@@ -435,10 +460,10 @@
                             <a class="service-info-link for-suppliers" href="#">Для поставщиков</a>
                         </li>
                         <li class="service-info-item">
-                            <a class="service-info-link about-production" href="#">О производстве</a>
+                            <a class="service-info-link ours-documents" href="#">Наши документы</a>
                         </li>
                         <li class="service-info-item">
-                            <a class="service-info-link ours-documents" href="#">Наши документы</a>
+                            <a class="service-info-link about-production" href="#">О производстве</a>
                         </li>
                         <li class="service-info-item">
                             <a class="service-info-link ecology-standart" href="#">Экологические стандарты</a>
@@ -447,12 +472,12 @@
                 </section>
                 <section class="copyright">
                     <h2>Копирайт</h2>
-                    <p class="copyright-text">
+                    
                         <a class="html-academy" href="https://up.htmlacademy.ru/">
                             <img src="img/index/logo_academy.svg" alt="Логотип академии">
                         </a>
-                        Сделано в HTML Academy &copy; 2019
-                    </p>
+                        <p class="copyright-text">Сделано в HTML Academy &copy; 2019</p>
+                        
                 </section>
             </div>
         </footer>

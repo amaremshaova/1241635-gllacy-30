@@ -114,11 +114,13 @@ input {
 
 /* catalog */
 .basket-header,
-.filters h2,
-.products-container h2 {
+.filters h2 {
     display: none;
 }
 
+.main-header{
+    margin-top: 9px;
+}
 /* Main navigation */
 
 .nav-container {
@@ -130,6 +132,13 @@ input {
     display: grid;
     justify-content: space-between;
     grid-auto-flow: column;
+}
+
+.site-navigation{
+    display: flex;
+}
+.site-nav-item:not(:last-child){
+    margin-right:32px; 
 }
 
 .site-nav-link {
@@ -258,21 +267,27 @@ input {
     width: 560px;
     height: 229px;
     background-repeat: no-repeat;
-    border-radius: 16px;
+    
     font-weight: 700;
+    padding: 16px 22px 22px 16px;
+    box-sizing: border-box;
+
 }
 
 .promotion-first {
     background-image: url("../img/index/crimson_background.jpg");
+    border-radius: 16px;
 }
 
 .promotion-second {
     background-image: url("../img/index/chocolate_background.jpg");
+    border-radius: 16px;
 }
 
 .promotion-header {
     font-size: 35px;
     line-height: 41px;
+    margin:0; 
 }
 
 .promotion-text {
@@ -283,7 +298,33 @@ input {
 .promotion-button {
     font-size: 18px;
     line-height: 24px;
+    margin-left: 22px; 
 }
+
+.set-jam-button-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.set-jam-button{
+    width: 164px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+
+}
+.set-chocolate-button{
+    width: 191px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.set-chocolate-button-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 /* Hits */
 
@@ -301,15 +342,24 @@ input {
 }
 
 .product {
-    width: 267px;
-    border-radius: 50%;
     margin: 0;
+    position: relative;
+}
+
+.product-img{
+    border-radius: 50%;
+}
+
+.price-kg-container{
+    position: absolute;
+    top: 216px;
 }
 
 .price {
     font-weight: 700;
     font-size: 45px;
     line-height: 45px;
+
 }
 
 .kg {
@@ -322,6 +372,8 @@ input {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+    text-align: center;
+    margin-top: 13px;
 }
 
 /* Features */
@@ -332,6 +384,8 @@ input {
     border-radius: 16px;
     width: 1146px;
     height: 306px;
+    padding: 24px 23px 36px 20px; 
+    box-sizing: border-box;
 }
 
 .features-main-description {
@@ -344,8 +398,27 @@ input {
 .features-text {
     font-size: 16px;
     line-height: 22px;
+    margin: 0; 
 }
 
+.features-list{
+    margin-top: 21px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ice-cream-text, .leaf-text{
+    width: 485px;
+    margin-right: 81px;
+}
+
+.cow-text, .thermometer-text{
+    width: 482px
+}
+
+.leaf-text, .thermometer-text{
+    margin-top: 33px
+}
 /* News */
 
 .news-container {
@@ -362,6 +435,10 @@ input {
 }
 
 .news-header {
+    margin: 0; 
+    margin-top: 23px;
+    margin-left: 20px; 
+
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
@@ -374,6 +451,14 @@ input {
     line-height: 30px;
     color: var(--basic-black);
     text-decoration: underline;
+
+}
+
+.news-link-container{
+    width: 287px; 
+    margin-top: 15px;
+    margin-left: 20px; 
+
 }
 
 .news-link:hover {
@@ -397,6 +482,24 @@ input {
     height: 210px;
     border-radius: 16px;
     margin: 5px 6px;
+    padding: 29px 16px 35px 20px; 
+    box-sizing: border-box;
+}
+
+.subscription-form{
+    margin-top: 47px; 
+}
+
+.subscription-email-input{
+    width: 368px;
+    height: 44px;
+    box-sizing: border-box;
+}
+
+.send-button{
+    margin-left: 10px;
+    width: 130px;
+    height: 44px;
 }
 
 .subscription-text {
@@ -419,6 +522,8 @@ input {
     background-color: var(--background-feedback-form);
     border-radius: 16px;
     color: var(--basic-black);
+    padding: 32px 25px 31px 25px;
+    box-sizing: border-box;
 }
 
 .contacts-address {
@@ -431,25 +536,72 @@ input {
     color: var(--basic-black);
 }
 
+.feedback-button{
+width: 253px;
+height: 43px;
+display: flex;
+align-items: center;
+padding-left: 28px; 
+box-sizing: border-box;
+
+}
+
 .social-footer {
     display: grid;
     justify-content: space-between;
     grid-auto-flow: column;
+    height: 103px; 
+}
+
+.social, .service-info{
+    margin-top: 36px; 
 }
 
 .social-label {
     display: none;
 }
 
+.social-list{
+    display: flex;
+    padding: 0;
+    margin: 0; 
+}
+
+.social-item:not(:last-child){
+    margin-right: 12px;
+}
+
+.service-info-list{
+    width: 305px; 
+    padding: 0;
+    margin: 0; 
+    height: 35px; 
+    display: flex; 
+    flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.service-info-item{
+    width: 111px; 
+}
+.service-info-item:nth-child(2n){
+    width: 162px; 
+}
+
 .service-info-link {
     color: var(--basic-white);
     font-size: 13px;
     line-height: 18px;
+
 }
 
+.copyright{
+    margin-top: 8px;
+}
 .copyright-text {
     font-size: 12px;
     line-height: 18px;
+    margin-top: 8px
 }
 
 .feedback-text {
@@ -497,21 +649,31 @@ input {
 .bread-crumbs {
     font-size: 14px;
     line-height: 16px;
+    display: flex;
+    padding: 0
 }
 
+
+.bread-crumbs-item:not(:last-child){
+    margin-right: 22px;
+}
 .catalog-header {
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
+    margin: 0; 
+    margin-bottom: 29px;
 }
 
 /* filters */
+.filters{
+    margin-bottom: 40px;
+}
 
 .filters-form{
     display: flex;
     width: 869px;
     flex-wrap: wrap;
-    
 }
 
 .sort-filter-container{
@@ -534,31 +696,112 @@ input {
     margin: 0; 
     border: none;  
 }
+.fat-content-list, .fillers-list{
+    display: flex;
+}
+
+.fat-content-item:not(:last-child){
+    margin-right: 19px; 
+}
 
 .fillers-filter{
     width: 711px;
+    border: none;  
+    margin: 0; 
+    padding: 0; 
+}
+
+.fillers-list{
     padding: 0; 
     margin: 0; 
-    border: none;  
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.fillers-list, .fat-content-list{
+    height: 36px; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.fillers-item{
+    margin-top:8px;
+}
+.filter-chocolate, .filter-powdered-sugar{
+    margin-right: 8px;
+    margin-left: 16px;
+}
+
+.filter-chocolate-item{
+    margin-right: 20px;
+}
+.filter-powdered-sugar-item{
+    margin-right: 22px;
+}
+
+.filter-fruits{
+    margin-right: 14px;
+}
+
+.filter-fruits-item{
+    margin-right: 24px;
+}
+
+.filter-syrups{
+    margin-right: 12px;
+}
+
+.filter-syrups-item{
+    margin-right: 21px;
+}
+
+.filter-jams{
+    margin-right: 13px;
+}
+
+.fillers-label{
+    margin-bottom: 11px;
 }
 
 .filter-label {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    
+    margin-bottom: 7px;
 }
 
 .apply-button{
     width: 144px;
     height: 36px; 
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--basic-white);
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: var(--basic-white);
+    font-weight: 500;
+font-size: 16px;
+line-height: 18px;
 }
 
 .catalog-pages-list{
-    margin-bottom: 0px;
-    margin-top: 80px
+    margin-bottom: -3px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%
 }
 
+.previous-catalog-pages{
+    margin-right: 24px;
+}
+
+.number-catalog-pages:not(:last-child){
+    margin-right: 22px;
+}
+
+.next-catalog-pages{
+    margin-right: 26px;
+}
 /* catalog-pages-list */
 
 .catalog-pages-list,
