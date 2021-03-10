@@ -13,7 +13,7 @@ function init () {
     // Необходимо указать данный тип макета.
     iconLayout: 'default#image',
     // Своё изображение иконки метки.
-    iconImageHref: '../img/index/pin.svg',
+    iconImageHref: 'img/index/pin.svg',
     // Размеры метки.
     iconImageSize: [80, 140],
     iconImageOffset: [-40, -140]

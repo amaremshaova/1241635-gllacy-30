@@ -11,7 +11,7 @@
         <link rel='stylesheet' type='text/css' href='css/style.css'>
     </head>
     <body>
-        <header class='main-header'>
+        <header class='main-header wrap'>
             <div class='nav-container'>
                 <a href='index.html'>
                     <img
@@ -21,7 +21,7 @@
                     width='154'
                     height='64'>
                 </a>
-                <nav class='main-nav'>
+                <nav class='main-nav '>
                     <ul class='site-nav'>
                         <li class='site-nav-item site-nav-catalog-item'>
                             <a class='site-nav-link active-page' href='#'>Каталог</a>
@@ -250,7 +250,7 @@
 
     </header>
 
-    <main class='container-catalog'>
+    <main class='container-catalog wrap'>
         <h1 class='catalog-header'>Cливочное мороженое</h1>
         <section class='filters'>
             <h2>Фильтр товаров</h2>
@@ -271,9 +271,8 @@
                 <fieldset class='product-price-filter-container'>
                     <legend class='filter-label'>Цена:
                         <span class='min-product-price'>100</span>
-                        &#8381; -
-                        <span class='max-product-price'>500</span>
-                        &#8381;</legend>
+                        &#8381;<span class='max-product-price'>500</span> &#8381;
+                    </legend>
                     <div class='range-controls'>
                         <div class='scale'>
                             <div class='bar'></div>
@@ -353,7 +352,7 @@
                         </li>
                         <li class='fillers-item filter-fruits-item'>
                            
-                            <label class='filler-label' for='filter-fruits'>
+                            <label class='filler-label filler-label-fruits' for='filter-fruits'>
 
                                 <input
                                 class='filter-checkbox filter-fruits'
@@ -390,7 +389,7 @@
                         </li>
                         <li class='fillers-item'>
                            
-                            <label class='filler-label' for='filter-jams'>
+                            <label class='filler-label filler-label-jam' for='filter-jams'>
                                 <input
                                 class='filter-checkbox filter-jams'
                                 type='checkbox'
@@ -667,7 +666,7 @@
 
         </section>
     </main>
-    <footer class='main-footer'>
+    <footer class='main-footer wrap'>
         <div class='social-footer'>
             <section class='social-section'>
                 <h2>Давайте дружить</h2>
@@ -899,6 +898,7 @@
 
     <script src='js/index.js'></script>
     <script src='js/search.js'></script>
+    <script async src="//pixel-perfect.org/service/script.js?guid=3e977d3ab1f4755192199aa897dcd1c1"></script>
 
 </body>
 </html>

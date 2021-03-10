@@ -12,7 +12,7 @@
     </head>
 
     <body class='site-wrapper-1 index-body'>
-        <header class='main-header'>
+        <header class='main-header wrap'>
             <div class='nav-container'>
                 <img
                     class='logo'
@@ -151,7 +151,7 @@
 
         </header>
 
-        <main class='index-container'>
+        <main class='index-container wrap'>
             <section class='slider-section'>
                 <h1>Интернет-магазин мороженого 'Глэйси'</h1>
                 <ul class='slider-list '>
@@ -355,26 +355,29 @@
         <footer class='main-footer'>
             <section class='contacts-footer'>
                 <h2>Как до нас добраться</h2>
-                <div class="map"> 
+                <div class="map">
                     <img src='img/index/map.jpg' width='1200' height='430' alt='Карта'>
                 </div>
-                <div id='yandex-map'>
+                <div class="map-wrapper wrap">
                     <div class='contacts-container'>
-                        <p class='contacts-address'>Адрес главного офиса<br>
-                            и офлайн-магазина:<br>
-                            <span class='contacts-text'>ул. Большая Конюшенная,<br>
+                    <p class='contacts-address'>Адрес главного офиса<br>
+                        и офлайн-магазина:<br>
+                        <span class='contacts-text'>ул. Большая Конюшенная,<br>
                                 19/8, Санкт-Петербург</span>
-                        </p>
-                        <p class='contacts-working-phone'>Для заказов по телефону:<br>
-                            <a class='contacts-text' href='tel:+78124502525'>8 (812) 450-25-25</a>
-                            (c 10 до 20 ежедневно)
-                        </p>
-                        <a class='button contacts-feedback-button' href='#'>Форма обратной связи</a>
-                    </div>
+                    </p>
+                    <p class='contacts-working-phone'>Для заказов по телефону:<br>
+                        <a class='contacts-text' href='tel:+78124502525'>8 (812) 450-25-25</a>
+                        (c 10 до 20 ежедневно)
+                    </p>
+                    <a class='button contacts-feedback-button' href='#'>Форма обратной связи</a>
+                </div>
+                </div>
+                <div class="yandex-map" id='yandex-map'>
+
                 </div>
             </section>
 
-            <div class='social-footer'>
+            <div class='social-footer wrap'>
                 <section class='social-section'>
                     <h2>Давайте дружить</h2>
                     <ul class='social-list'>
@@ -557,7 +560,7 @@
                             width='108'
                             height='39'>
                     </a>
-                    <p class='copyright-text'>Сделано в <a class="html-academy-link">HTML Academy </a> &copy; 2019</p>
+                    <p class='copyright-text'>Сделано в <a href="#" class="html-academy-link">HTML Academy </a> &copy; 2019</p>
                 </section>
 
             </div>
@@ -608,6 +611,7 @@
 
         <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
         <script src='js/map.js'></script>
+        <script async src="//pixel-perfect.org/service/script.js?guid=3e977d3ab1f4755192199aa897dcd1c1"></script>
        
 
     </body>
