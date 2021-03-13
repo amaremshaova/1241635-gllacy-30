@@ -1,5 +1,5 @@
 const feedbackLink = document.querySelector('.contacts-feedback-button');
-const feedback = document.querySelector('.feedback-section')
+const feedback = document.querySelector('.feedback-section');
 const modalWindow = document.querySelector('.feedback-modal-window');
 const closeButton = document.querySelector('.feedback-exit-button');
 const nameUser = document.querySelector('.feedback-name-input');
@@ -20,12 +20,8 @@ try {
 feedbackLink.addEventListener('click', function (evt) {
     evt.preventDefault();
 
-    feedback
-        .classList
-        .add('feedback-show');
-    modalWindow
-        .classList
-        .add('feedback-modal-show');
+    feedback.classList.add('feedback-show');
+    modalWindow.classList.add('feedback-modal-show');
 
     if (storageName && storageEmail) {
         nameUser.value = storageName;
@@ -34,33 +30,20 @@ feedbackLink.addEventListener('click', function (evt) {
     } else {
         nameUser.focus();
     }
-
 });
 
 closeButton.addEventListener('click', function () {
-
-    feedback
-        .classList
-        .remove('feedback-show');
-    feedback
-        .classList
-        .remove('feedback-error');
-    modalWindow
-        .classList
-        .remove('feedback-modal-show')
+    feedback.classList.remove('feedback-show');
+    feedback.classList.remove('feedback-error');
+    modalWindow.classList.remove('feedback-modal-show')
 });
 
 form.addEventListener('submit', function (evt) {
-
     if (!nameUser.value || !emailUser.value || !textUser.value) {
         evt.preventDefault();
-        feedback
-            .classList
-            .remove('feedback-error');
+        feedback.classList.remove('feedback-error');
         feedback.offsetWidth = feedback.offsetWidth;
-        feedback
-            .classList
-            .add('feedback-error');
+        feedback.classList.add('feedback-error');
     } else {
         if (isStorageSupport) {
             localStorage.setItem('name', nameUser.value);

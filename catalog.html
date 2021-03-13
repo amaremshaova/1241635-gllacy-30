@@ -8,7 +8,7 @@
         <link rel='apple-touch-icon' href='img/favicon/apple.png'>
         <link rel='manifest' href='manifest.webmanifest.json'>
         <link href='css/normalize.css' rel='stylesheet'>
-        <link rel='stylesheet' type='text/css' href='css/style.css'>
+        <link rel='stylesheet' type='text/css' href='css/min_style.css'>
     </head>
     <body>
         <header class='main-header wrap'>
@@ -286,12 +286,12 @@
                 <fieldset class='fat-content-filter'>
                     <legend class='filter-label'>Жирность</legend>
                     <ul class='fat-content-filter-list'>
-                        <li class='fat-content-filter-item'>
+                        <li class='fat-content-filter-item' >
                             <input class='fat-content-filter-radio' type='radio' name='fat-content-group' id='filter-0%' >
                             <label class='fat-content-filter-radio-label' for='filter-0%' tabindex="0">0%</label>
                         </li>
                         <li class='fat-content-filter-item'>
-                            <input class='fat-content-filter-radio' type='radio' name='fat-content-group' id='filter-10%' >
+                            <input class='fat-content-filter-radio' checked type='radio' name='fat-content-group' id='filter-10%' >
                             <label class='fat-content-filter-radio-label' for='filter-10%' tabindex="0">до 10%</label>
                         </li>
                         <li class='fat-content-filter-item'>
@@ -639,7 +639,7 @@
 
             <ol class='catalog-pages-list'>
                 <li class='catalog-page-previous-items'>
-                    <a href='#'>
+                    <a class="disabled" href='#'>
                         <svg
                             class='catalog-page-inactive-icon'
                             width='7'
@@ -651,7 +651,7 @@
                         </svg>
                     </a>
                 </li>
-                <li class='catalog-page-number-item catalog-page-selected-item'>
+                <li class='catalog-page-number-item catalog-page-selected-item '>
                     <a class='catalog-page-number-link' href='#'>1</a>
                 </li>
                 <li class='catalog-page-number-item'>
@@ -918,8 +918,7 @@
         </form>
     </section>
 
-    <script src='js/login.js'></script>
-    <script src='js/index.js'></script>
-    <script src='js/search.js'></script>
+    <script src='js/index_min.js'></script>
+    <script src='js/login_min.js'></script>
 </body>
 </html>
