@@ -1,37 +1,27 @@
-const emailUser = document.querySelector('.authorization-login-input'); 
-const passwordUser = document.querySelector('.authorization-password-input'); 
-const loginButton = document.querySelector('.authorization-button'); 
-const form = document.querySelector('.authorization-form');
-const authorization = document.querySelector('.authorization-section'); 
+const authorizationEmailUser = document.querySelector('.authorization-login-input'); 
+const authorizationPasswordUser = document.querySelector('.authorization-password-input'); 
+const authorizationButton = document.querySelector('.authorization-button'); 
+const authorizationForm = document.querySelector('.authorization-form');
+const authorizationSection = document.querySelector('.authorization-section'); 
 
-let isStorageSupport = true;
-let storage = '';
+
+let authorizationIsStorageSupport = true;
 
 try {
     storageEmail = localStorage.getItem('email');
 } catch (err) {
-  isStorageSupport = false;
+    authorizationIsStorageSupport = false;
 }
 
-loginButton.addEventListener('click', function(evt){
-    evt.preventDefault();
-    if (storageEmail) {
-        emailUser.value = storageEmail;
-        passwordUser.focus(); 
-    }
-    else {
-        emailUser.focus();
-    }
-});
-
-form.addEventListener('submit', function (evt) {
-    evt.preventDefault();
-    if (!emailUser.value || !passwordUser.value) {
+authorizationForm.addEventListener('submit', function (evt) {
+    if (!authorizationEmailUser.value || ! authorizationPasswordUser.value) {
         evt.preventDefault();
-        authorization.classList.add('feedback-error');
+        authorizationSection.classList.remove('feedback-error');
+        authorizationSection.offsetWidth = authorizationSection.offsetWidth;
+        authorizationSection.classList.add('feedback-error');
     } else {
-        if (isStorageSupport) {
-            localStorage.setItem('email', emailUser.value);
+        if (authorizationIsStorageSupport) {
+            localStorage.setItem('email', authorizationEmailUser.value);
         }
     }
 });

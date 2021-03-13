@@ -100,7 +100,8 @@
                                         type='email'
                                         name='login'
                                         placeholder='email@example.com'
-                                        aria-label='Логин пользователя'>
+                                        aria-label='Логин пользователя'
+                                        autocomplete='off'>
 
                                     <input
                                         class='authorization-password-input'
@@ -147,7 +148,7 @@
                                     <td class='basket-delete-column'>
                                         <button class='basket-delete-button-container'>
                                             <svg
-                                                class='delete-button'
+                                                class='basket-delete-button'
                                                 width='11'
                                                 height='11'
                                                 viewbox='0 0 11 11'
@@ -158,7 +159,7 @@
                                             </svg>
                                         </button>
                                     </td>
-                                    <td class='img-column'>
+                                    <td class='basket-img-column'>
                                         <img
                                             class='basket-img'
                                             src='img/index/hit_1.jpg'
@@ -171,15 +172,15 @@
                                     </td>
                                     <td class='basket-product-price-one-product-column'>
                                         1.5 кг x
-                                        <span class='product-price-one-product'>200 руб.</span>
+                                        <span class='basket-product-price-one-product'>200 руб.</span>
                                     </td>
-                                    <td class='product-price-column'>300 руб.</td>
+                                    <td class='basket-product-price-column'>300 руб.</td>
                                 </tr>
                                 <tr class='basket-table-row'>
                                     <td class='basket-delete-column'>
                                         <button class='basket-delete-button-container'>
                                             <svg
-                                                class='delete-button'
+                                                class='basket-delete-button'
                                                 width='11'
                                                 height='11'
                                                 viewbox='0 0 11 11'
@@ -190,9 +191,9 @@
                                             </svg>
                                         </button>
                                     </td>
-                                    <td class='img-column'>
+                                    <td class='basket-img-column'>
                                         <img
-                                            class=' basket-img'
+                                            class='basket-img'
                                             src='img/index/hit_3.jpg'
                                             alt='Мороженое 2'
                                             width='33'
@@ -203,16 +204,16 @@
                                     </td>
                                     <td class='basket-product-price-one-product-column'>
                                         1.5 кг x
-                                        <span class='product-price-one-product'>300руб.</span>
+                                        <span class='basket-product-price-one-product'>300руб.</span>
                                     </td>
-                                    <td class='product-price-column'>450 руб.</td>
+                                    <td class='basket-product-price-column'>450 руб.</td>
                                 </tr>
                             </table>
 
                             <div class='basket-total-container'>
                                 <div class='basket-horisontal-line'></div>
                                 <p class='basket-total'>Итого:
-                                    <span class='total-product-price'>750 руб.</span>
+                                    <span class='basket-total-product-price'>750 руб.</span>
                                 </p>
                                 <a class='button basket-button' href='#'>Оформить заказ</a>
                             </div>
@@ -250,7 +251,7 @@
 
     </header>
 
-    <main class='container-catalog wrap'>
+    <main class='catalog-container wrap'>
         <h1 class='catalog-header'>Cливочное мороженое</h1>
         <section class='filters'>
             <h2>Фильтр товаров</h2>
@@ -263,7 +264,7 @@
                         <option class='sort-filter-option'>сначала дорогие</option>
                         <option class='sort-filter-option'>по жирности</option>
                     </select>
-                    <svg class='arrow-icon' width='11' height='10' viewBox='0 0 11 10' xmlns='http://www.w3.org/2000/svg'>
+                    <svg class='sort-arrow-icon' width='11' height='10' viewBox='0 0 11 10' xmlns='http://www.w3.org/2000/svg'>
                         <path d='M5.5 10L0 0H11' />
                         </svg>
                 </fieldset>
@@ -271,135 +272,135 @@
                 <fieldset class='product-price-filter-container'>
                     <legend class='filter-label'>Цена:
                         <span class='min-product-price'>100</span>
-                        &#8381;<span class='max-product-price'>500</span> &#8381;
+                        &#8381; &#8211; <span class='max-product-price'>500</span> &#8381;
                     </legend>
-                    <div class='range-controls'>
-                        <div class='scale'>
-                            <div class='bar'></div>
+                    <div class='product-price-filter-range-controls'>
+                        <div class='product-price-filter-scale'>
+                            <div class='product-price-filter-bar'></div>
                         </div>
-                        <div class='range-toggle range-toggle-min'></div>
-                        <div class='range-toggle range-toggle-max'></div>
+                        <div tabindex="0" class='product-price-filter-range-toggle product-price-filter-range-toggle-min'></div>
+                        <div tabindex="0" class='product-price-filter-range-toggle product-price-filter-range-toggle-max'></div>
                     </div>
                 </fieldset>
 
                 <fieldset class='fat-content-filter'>
                     <legend class='filter-label'>Жирность</legend>
-                    <ul class='fat-content-list'>
-                        <li class='fat-content-item'>
-                            
-                            <input class='radio-fat' type='radio' name='fat-content-group' id='filter-0%'>
-                            <label class='radio-fat-label' for='filter-0%'>0%</label>
+                    <ul class='fat-content-filter-list'>
+                        <li class='fat-content-filter-item'>
+                            <input class='fat-content-filter-radio' type='radio' name='fat-content-group' id='filter-0%' >
+                            <label class='fat-content-filter-radio-label' for='filter-0%' tabindex="0">0%</label>
                         </li>
-                        <li class='fat-content-item'>
-                            <input class='radio-fat' type='radio' name='fat-content-group' id='filter-10%'>
-                            <label class='radio-fat-label' for='filter-10%'>до 10%</label>
+                        <li class='fat-content-filter-item'>
+                            <input class='fat-content-filter-radio' type='radio' name='fat-content-group' id='filter-10%' >
+                            <label class='fat-content-filter-radio-label' for='filter-10%' tabindex="0">до 10%</label>
                         </li>
-                        <li class='fat-content-item'>
-                            <input class='radio-fat' type='radio' name='fat-content-group' id='filter-30%'>
-                            <label class='radio-fat-label' for='filter-30%'>до 30%</label>
+                        <li class='fat-content-filter-item'>
+                            <input class='fat-content-filter-radio' type='radio' name='fat-content-group' id='filter-30%'>
+                            <label class='fat-content-filter-radio-label' for='filter-30%' tabindex="0">до 30%</label>
                         </li>
-                        <li class='fat-content-item'>
-                            <input class='radio-fat' type='radio' name='fat-content-group' id='filter-30%+'>
-                            <label class='radio-fat-label' for='filter-30%+'>выше 30%</label>
+                        <li class='fat-content-filter-item'>
+                            <input class='fat-content-filter-radio' type='radio' name='fat-content-group' id='filter-30%+'>
+                            <label class='fat-content-filter-radio-label' for='filter-30%+' tabindex="0">выше 30%</label>
                         </li>
+                        
                     </ul>
                 </fieldset>
 
                 <fieldset class='fillers-filter'>
-                    <legend class='filter-label fillers-label'>Наполнители:</legend>
-                    <ul class='fillers-list'>
-                        <li class='fillers-item filter-chocolate-item'>
+                    <legend class='filter-label fillers-filter-label'>Наполнители:</legend>
+                    <ul class='fillers-filter-list'>
+                        <li class='fillers-filter-item fillers-fillers-filter-chocolate-item'>
 
-                            <label class='filler-label' for='filter-chocolate'>
+                            <label class='fillers-filter-checkbox-label' for='fillers-filter-chocolate' tabindex="0">
 
                                 <input
-                                class='filter-checkbox filter-chocolate'
+                                class='fillers-filter-checkbox fillers-filter-chocolate'
                                 type='checkbox'
                                 name='сhocolate'
-                                id='filter-chocolate'
+                                id='fillers-filter-chocolate'
                                 checked='checked'>
                                 
-                                <svg class='checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                <svg class='fillers-filter-checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                     <path d='M6.68552 6.51304L4.09018 8.96522L11.2251 15.7391L17.6125 9.68261L24 3.62609L21.4047 1.16522L11.2251 10.8174L6.68552 6.51304Z' fill='white' fill-opacity='0.8'/>
                                     <path d='M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z' />
                                     </svg>
-                                    <svg class='checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='fillers-filter-checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                         <path d='M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z' />
                                         </svg>
 
                                 шоколадные
                             </label>
                         </li>
-                        <li class='fillers-item filter-powdered-sugar-item'>
+                        <li class='fillers-filter-item fillers-fillers-filter-powdered-sugar-item'>
                            
-                            <label class='filler-label' for='filter-powdered-sugar'>
+                            <label class='fillers-filter-checkbox-label' for='fillers-filter-powdered-sugar' tabindex="0">
                                 <input
-                                class='filter-checkbox filter-powdered-sugar'
+                                class='fillers-filter-checkbox fillers-filter-powdered-sugar'
                                 type='checkbox'
                                 name='powdered sugar'
-                                id='filter-powdered-sugar'
+                                id='fillers-filter-powdered-sugar'
                                 checked='checked'>
                                                             
-                                <svg class='checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                <svg class='fillers-filter-checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                     <path d='M6.68552 6.51304L4.09018 8.96522L11.2251 15.7391L17.6125 9.68261L24 3.62609L21.4047 1.16522L11.2251 10.8174L6.68552 6.51304Z' fill='white' fill-opacity='0.8'/>
                                     <path d='M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z' />
                                     </svg>
-                                    <svg class='checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='fillers-filter-checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                         <path d='M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z' />
                                         </svg>
                                 сахарные присыпки
                             </label>
                         </li>
-                        <li class='fillers-item filter-fruits-item'>
+                        <li class='fillers-filter-item fillers-filter-fruits-item'>
                            
-                            <label class='filler-label filler-label-fruits' for='filter-fruits'>
+                            <label class='fillers-filter-checkbox-label fillers-fillers-filter-fruits-checkbox-label' for='fillers-filter-fruits' tabindex="0">
 
                                 <input
-                                class='filter-checkbox filter-fruits'
+                                class='fillers-filter-checkbox fillers-filter-fruits'
                                 type='checkbox'
                                 name='fruits'
-                                id='filter-fruits'>
-                                <svg class='checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                id='fillers-filter-fruits'>
+                                <svg class='fillers-filter-checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                     <path d='M6.68552 6.51304L4.09018 8.96522L11.2251 15.7391L17.6125 9.68261L24 3.62609L21.4047 1.16522L11.2251 10.8174L6.68552 6.51304Z' fill='white' fill-opacity='0.8'/>
                                     <path d='M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z' />
                                     </svg>
-                                    <svg class='checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='fillers-filter-checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                         <path d='M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z' />
                                         </svg>
                                 фрукты
                             </label>
                         </li>
-                        <li class='fillers-item filter-syrups-item'>
+                        <li class='fillers-filter-item fillers-syrups-item'>
                            
-                            <label class='filler-label' for='filter-syrups'>
+                            <label class='fillers-filter-checkbox-label' for='fillers-syrups' tabindex="0">
                                 <input
-                                class='filter-checkbox filter-syrups'
+                                class='fillers-filter-checkbox fillers-syrups'
                                 type='checkbox'
                                 name='syrups'
-                                id='filter-syrups'>
-                                <svg class='checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                id='fillers-syrups'>
+                                <svg class='fillers-filter-checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                     <path d='M6.68552 6.51304L4.09018 8.96522L11.2251 15.7391L17.6125 9.68261L24 3.62609L21.4047 1.16522L11.2251 10.8174L6.68552 6.51304Z' fill='white' fill-opacity='0.8'/>
                                     <path d='M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z' />
                                     </svg>
-                                    <svg class='checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='fillers-filter-checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                         <path d='M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z' />
                                         </svg>
                                 сиропы
                             </label>
                         </li>
-                        <li class='fillers-item'>
+                        <li class='fillers-filter-item'>
                            
-                            <label class='filler-label filler-label-jam' for='filter-jams'>
+                            <label class='fillers-filter-checkbox-label fillers-filter-jam-checkbox-label' for='filter-jams' tabindex="0">
                                 <input
-                                class='filter-checkbox filter-jams'
+                                class='fillers-filter-checkbox filter-jams'
                                 type='checkbox'
                                 name='jams'
                                 id='filter-jams'>
-                                <svg class='checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                <svg class='fillers-filter-checkbox-on-icon' width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                     <path d='M6.68552 6.51304L4.09018 8.96522L11.2251 15.7391L17.6125 9.68261L24 3.62609L21.4047 1.16522L11.2251 10.8174L6.68552 6.51304Z' fill='white' fill-opacity='0.8'/>
                                     <path d='M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z' />
                                     </svg>
-                                    <svg class='checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='fillers-filter-checkbox-off-icon' width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                                         <path d='M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z' />
                                         </svg>
                                 джемы
@@ -407,7 +408,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <button class='apply-button' type='submit'>Применить</button>
+                <button class='fillers-filter-apply-button' type='submit'>Применить</button>
             </form>
         </section>
 
@@ -426,7 +427,8 @@
                             <span class='product-price'>310 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное с апельсиновым джемом и цитрусовой стружкой</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное с&#160;апельсиновым&#160; джемом и цитрусовой стружкой</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -443,7 +445,8 @@
                             <span class='product-price'>380 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочно-кофейное с кусочками шоколада</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочно-кофейное с кусочками шоколада</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -461,7 +464,9 @@
                             <span class='product-kg'>/кг</span>
                         </div>
 
-                        <figcaption class='product-label'>Сливочно-клубничное с присыпкой из белого шоколада</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочно-клубничное&#160;с присыпкой из белого шоколада</a>
+                        </figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -478,7 +483,9 @@
                             <span class='product-price'>415 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное крем-брюле с карамельной подливкой</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное крем-брюле c&#160;карамельной подливкой</a>
+                        </figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -495,7 +502,9 @@
                             <span class='product-price'>325 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное с брусничным джемом</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное&#160;с&#160;брусничным джемом</a>
+                        </figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -512,7 +521,8 @@
                             <span class='product-price'>410 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочно-черничное с цельными ягодами черники</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочно-черничное с цельными ягодами черники</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -529,7 +539,9 @@
                             <span class='product-price'>315 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочно-лимонное с карамельной присыпкой</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочно-лимонное с карамельной присыпкой</a>
+                        </figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -546,7 +558,9 @@
                             <span class='product-price'>320 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное с шоколадной стружкой</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное с шоколадной стружкой</a>
+                        </figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -562,7 +576,8 @@
                             <span class='product-price'>440 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочно-ванильное с кусочками шоколада</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочно-ванильное с&#160;кусочками&#160;шоколада</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -579,7 +594,8 @@
                             <span class='product-price'>435 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное с ментоловым сиропом</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное с ментоловым сиропом</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -596,7 +612,8 @@
                             <span class='product-price'>355 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное с кусочками черного шоколада</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное с кусочками черного шоколада</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
@@ -613,17 +630,18 @@
                             <span class='product-price'>420 &#8381;</span>
                             <span class='product-kg'>/кг</span>
                         </div>
-                        <figcaption class='product-label'>Сливочное с мятным сиропом</figcaption>
+                        <figcaption class='product-label'>
+                            <a href='#'>Сливочное с мятным сиропом</a></figcaption>
                     </figure>
                     <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                 </li>
             </ul>
 
             <ol class='catalog-pages-list'>
-                <li class='previous-catalog-pages'>
+                <li class='catalog-page-previous-items'>
                     <a href='#'>
                         <svg
-                            class='inactive-icon'
+                            class='catalog-page-inactive-icon'
                             width='7'
                             height='12'
                             viewbox='0 0 7 12'
@@ -633,25 +651,25 @@
                         </svg>
                     </a>
                 </li>
-                <li class='number-catalog-pages selected-page'>
-                    <a class='number-page' href='#'>1</a>
+                <li class='catalog-page-number-item catalog-page-selected-item'>
+                    <a class='catalog-page-number-link' href='#'>1</a>
                 </li>
-                <li class='number-catalog-pages'>
-                    <a class='number-page' href='#'>2</a>
+                <li class='catalog-page-number-item'>
+                    <a class='catalog-page-number-link' href='#'>2</a>
                 </li>
-                <li class='number-catalog-pages'>
-                    <a class='number-page' href='#'>3</a>
+                <li class='catalog-page-number-item'>
+                    <a class='catalog-page-number-link' href='#'>3</a>
                 </li>
-                <li class='number-catalog-pages'>
-                    <a class='number-page' href='#'>4</a>
+                <li class='catalog-page-number-item'>
+                    <a class='catalog-page-number-link' href='#'>4</a>
                 </li>
-                <li class='number-catalog-pages'>
-                    <a class='number-page' href='#'>5</a>
+                <li class='catalog-page-number-item'>
+                    <a class='catalog-page-number-link' href='#'>5</a>
                 </li>
-                <li class='next-catalog-pages'>
+                <li class='catalog-page-next-item'>
                     <a href='#'>
                         <svg
-                            class='icon-active'
+                            class='catalog-page-active-icon'
                             width='7'
                             height='12'
                             viewbox='0 0 7 12'
@@ -824,6 +842,9 @@
                 <h2>Служебная информация</h2>
                 <ul class='service-info-list'>
                     <li class='service-info-item'>
+                        <svg class='service-info-link-icon' width='15' height='13' viewBox='0 0 15 13' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                            <path d='M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z'/>
+                            </svg>
                         <a class='service-info-link for-suppliers' href='#'>Для поставщиков</a>
                     </li>
                     <li class='service-info-item'>
@@ -850,19 +871,21 @@
                         width='108'
                         height='39'>
                 </a>
-                <p class='copyright-text'>Сделано в <a class="html-academy-link">HTML Academy </a> &copy; 2019</p>
+                <p class='copyright-text'>Сделано в <a class='html-academy-link' href='https://htmlacademy.ru/
+                    '>HTML Academy </a> &copy; 2019
+                </p>
             </section>
 
         </div>
     </footer>
 
-    <div class='modal-window'></div>
+    <div class='feedback-modal-window'></div>
     <section class='feedback-section'>
         <h2>Форма обратной связи</h2>
         <p class='feedback-header'>Мы обязательно вам ответим!</p>
-        <button class='exit-button' type='button' aria-label='Закрывает модальное окно'>
+        <button class='feedback-exit-button' type='button' aria-label='Закрывает модальное окно'>
             <svg
-                class='exit-button-icon'
+                class='feedback-exit-button-icon'
                 width='18'
                 height='17'
                 viewbox='0 0 18 17'
@@ -895,10 +918,8 @@
         </form>
     </section>
 
-
+    <script src='js/login.js'></script>
     <script src='js/index.js'></script>
     <script src='js/search.js'></script>
-    <script async src="//pixel-perfect.org/service/script.js?guid=3e977d3ab1f4755192199aa897dcd1c1"></script>
-
 </body>
 </html>

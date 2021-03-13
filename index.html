@@ -42,7 +42,6 @@
                                 <li class='menu-item'>
                                     <a class='menu-link' href='#'>Мелорин</a>
                                 </li>
-                                
                             </ul>
                         </li>
                         <li class='site-nav-item'>
@@ -51,6 +50,7 @@
                         <li class='site-nav-item'>
                             <a class='site-nav-link' href='#'>О компании</a>
                         </li>
+                        
                     </ul>
                     <div class='buttons-nav'>
                         <div class='search-link-container'>
@@ -94,13 +94,14 @@
                             </a>
                             <section class='authorization-section'>
                                 <h2>Вход в личный кабинет</h2>
-                                <form class='authorization-form' method='post'>
+                                <form class='authorization-form' action='https://echo.htmlacademy.ru' method='post'>
                                     <input
                                         class='authorization-login-input'
                                         type='email'
                                         name='login'
                                         placeholder='email@example.com'
-                                        aria-label='Логин пользователя'>
+                                        aria-label='Логин пользователя'
+                                        autocomplete='off'>
 
                                     <input
                                         class='authorization-password-input'
@@ -156,7 +157,7 @@
                 <h1>Интернет-магазин мороженого 'Глэйси'</h1>
                 <ul class='slider-list '>
                     <li class='slider-item slide-show'>
-                        <p class='slider-header'>Крем-брюле и пломбир с малиновым джемом </p>
+                        <p class='slider-header'>Крем-брюле и пломбир с малиновым джемом</p>
                         <a class='button slider-button' href='#'>Давайте оба!</a>
                     </li>
 
@@ -225,8 +226,9 @@
                                 <span class='product-price'>310 &#8381;</span>
                                 <span class='product-kg'>/кг</span>
                             </div>
-                            <a class='product-label'>Сливочное с апельсиновым джемом и цитрусовой стружкой
-                            </a>
+                            <figcaption class='product-label'>
+                                <a href='#'>Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                            </figcaption>
                         </figure>
 
                         <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
@@ -244,8 +246,9 @@
                                 <span class='product-price'>380 &#8381;</span>
                                 <span class='product-kg'>/кг</span>
                             </div>
-                            <a class='product-label'>Сливочно-кофейное с кусочками шоколада
-                            </a>
+                            <figcaption class='product-label'>
+                                <a href='#'>Сливочно-кофейное с кусочками шоколада</a>
+                            </figcaption>
                         </figure>
                         <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                     </li>
@@ -263,8 +266,9 @@
                                 <span class='product-kg'>/кг</span>
                             </div>
 
-                            <a class='product-label'>Сливочно-клубничное
-                                с присыпкой из белого шоколада</a>
+                            <figcaption class='product-label'>
+                                <a href='#'>Сливочно-клубничное c присыпкой из белого шоколада</a>
+                            </figcaption>
                         </figure>
                         <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                     </li>
@@ -281,8 +285,9 @@
                                 <span class='product-price'>415 &#8381;</span>
                                 <span class='product-kg'>/кг</span>
                             </div>
-                            <a class='product-label'>Сливочное крем-брюле<br>
-                                с карамельной подливкой</a>
+                            <figcaption class='product-label'>
+                                <a href='#'>Сливочное крем-брюле с&#160;карамельной&#160;подливкой</a>
+                            </figcaption>
                         </figure>
                         <a class='button product-open-view-button' href='#'>Быстрый просмотр</a>
                     </li>
@@ -291,7 +296,7 @@
 
             <section class='features-section'>
                 <h2>Наши преимущества</h2>
-                <p class='features-main-description'>Магазин Глэйси - это онлайн и
+                <p class='features-main-description'>Магазин Глэйси &#8211; это онлайн и
                     офлайн-магазин по продаже мороженого собственного производства на развес</p>
                 <ul class='features-list'>
 
@@ -325,7 +330,7 @@
                     <h2 class='news-header'>Новое в нашем блоге</h2>
                     <p class='news-link-container'>
                         <a class='news-link' href='#'>10 способов сервировки фруктовых щербетов
-                            к столу</a>
+                            к&#160;столу</a>
                     </p>
                 </article>
 
@@ -343,7 +348,7 @@
                                 class='subscription-email-input'
                                 type='email'
                                 name='email'
-                                placeholder='email@example.ru'
+                                placeholder='email@example.com'
                                 aria-label='Почтовый адрес (email)'>
                             <button class='button subscription-send-button ' type='submit'>Отправить</button>
                         </form>
@@ -355,24 +360,23 @@
         <footer class='main-footer'>
             <section class='contacts-footer'>
                 <h2>Как до нас добраться</h2>
-                <div class="map">
+                <div class='map'>
                     <img src='img/index/map.jpg' width='1200' height='430' alt='Карта'>
                 </div>
-                <div class="map-wrapper wrap">
+                <div class='map-wrapper wrap'>
                     <div class='contacts-container'>
                     <p class='contacts-address'>Адрес главного офиса<br>
                         и офлайн-магазина:<br>
                         <span class='contacts-text'>ул. Большая Конюшенная,<br>
                                 19/8, Санкт-Петербург</span>
-                    </p>
                     <p class='contacts-working-phone'>Для заказов по телефону:<br>
-                        <a class='contacts-text' href='tel:+78124502525'>8 (812) 450-25-25</a>
+                        <a class='contacts-text' href='tel:+78124502525'>8 812 450-25-25</a><br>
                         (c 10 до 20 ежедневно)
                     </p>
                     <a class='button contacts-feedback-button' href='#'>Форма обратной связи</a>
                 </div>
                 </div>
-                <div class="yandex-map" id='yandex-map'>
+                <div class='yandex-map' id='yandex-map'>
 
                 </div>
             </section>
@@ -527,6 +531,7 @@
                                 </svg>
                             </a>
                         </li>
+                        
                     </ul>
                 </section>
 
@@ -534,6 +539,9 @@
                     <h2>Служебная информация</h2>
                     <ul class='service-info-list'>
                         <li class='service-info-item'>
+                            <svg class='service-info-link-icon' width='15' height='13' viewBox='0 0 15 13' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z'/>
+                                </svg>
                             <a class='service-info-link for-suppliers' href='#'>Для поставщиков</a>
                         </li>
                         <li class='service-info-item'>
@@ -560,19 +568,20 @@
                             width='108'
                             height='39'>
                     </a>
-                    <p class='copyright-text'>Сделано в <a href="#" class="html-academy-link">HTML Academy </a> &copy; 2019</p>
+                    <p class='copyright-text'>
+                        Сделано в <a href='https://up.htmlacademy.ru/' class='html-academy-link'>HTML Academy </a> &copy; 2019</p>
                 </section>
 
             </div>
         </footer>
 
-        <div class='modal-window'></div>
+        <div class='feedback-modal-window'></div>
         <section class='feedback-section'>
             <h2>Форма обратной связи</h2>
             <p class='feedback-header'>Мы обязательно вам ответим!</p>
-            <button class='exit-button' type='button' aria-label='Закрывает модальное окно'>
+            <button class='feedback-exit-button' type='button' aria-label='Закрывает модальное окно'>
                 <svg
-                    class='exit-button-icon'
+                    class='feedback-exit-button-icon'
                     width='18'
                     height='17'
                     viewbox='0 0 18 17'
@@ -607,13 +616,10 @@
 
         <script src='js/index.js'></script>
         <script src='js/search.js'></script>
-        <script src='js/modal-window.js'></script>
-
+        <script src='js/feedback-modal-window.js'></script>
+        <script src='js/login.js'></script>
         <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
         <script src='js/map.js'></script>
-        <script async src="//pixel-perfect.org/service/script.js?guid=3e977d3ab1f4755192199aa897dcd1c1"></script>
-       
-
     </body>
 
 </html>
