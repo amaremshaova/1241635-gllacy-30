@@ -1612,6 +1612,11 @@ a {
     margin-left: 16px; 
 }
 
+.sort-filter-label{
+
+    display: none;
+}
+
 .sort-filter {
     border-radius: 20px;
     width: 196px;
@@ -1700,12 +1705,14 @@ a {
     width: 4px;
     height: 4px;
     background-color: var(--product-price-color);
-    border: 10px solid var(--basic-white);
+    border: 8px solid var(--basic-white);
     border-radius: 50%;
     margin-top: 16px;
     cursor: url(../img/cursor.svg), auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
 }
-
 
 .product-price-filter-range-toggle-min {
     left: 34px;
@@ -1791,7 +1798,7 @@ a {
 
 .fat-content-filter-radio-label:after {
     content: "";
-    display: block;
+    display: none;
     width: 7.92px;
     height: 7.92px;
     background-color: var(--transparent-color);
@@ -1802,7 +1809,7 @@ a {
 }
 
 .fat-content-filter-radio:checked + .fat-content-filter-radio-label:after {
-    opacity: 1;
+    display: block;
 }
 
 .fat-content-filter-radio:disabled + .fat-content-filter-radio-label:after,
@@ -1814,14 +1821,16 @@ a {
     border: 3.52px solid var(--basic-white);
 }
 
+.fat-content-filter-radio:not(:disabled) + .fat-content-filter-radio-label:hover::after{
+    background-color: var(--basic-white);
+}
+
 .fat-content-filter-radio:disabled + .fat-content-filter-radio-label{
     color: var(--btn-hover-background-color);
     cursor: default;
 }
 
-.fat-content-filter-radio:not(:disabled) + .fat-content-filter-radio-label:hover::after{
-    background-color: var(--basic-white);
-}
+
 
 /* Fillers-filter */
 
