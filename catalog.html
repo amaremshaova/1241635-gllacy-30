@@ -8,7 +8,7 @@
         <link rel="apple-touch-icon" href="img/favicon/apple.png">
         <link rel="manifest" href="manifest.webmanifest.json">
         <link href="css/normalize_min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style_min.css">
     </head>
     <body>
         <header class="main-header wrap">
@@ -67,7 +67,7 @@
                             </a>
 
                             <section class="search-section">
-                                <h2>Поиск</h2>
+                                <h2 class="visually-hidden">Поиск</h2>
                                 <form class="search-form">
                                     <input
                                         class="search-input"
@@ -93,7 +93,7 @@
                                 Вход
                             </a>
                             <section class="authorization-section">
-                                <h2>Вход в личный кабинет</h2>
+                                <h2 class="visually-hidden">Вход в личный кабинет</h2>
                                 <form class="authorization-form" method="post">
                                     <input
                                         class="authorization-login-input"
@@ -142,7 +142,7 @@
                             </a>
 
                             <section class="basket-section">
-                                <h2 class="basket-header">Корзина</h2>
+                                <h2 class="visually-hidden">Корзина</h2>
                                 <table class="basket-table">
                                     <tr class="basket-table-row">
                                         <td class="basket-delete-column">
@@ -273,10 +273,11 @@
         <main class="catalog-container wrap">
             <h1 class="catalog-header">Cливочное мороженое</h1>
             <section class="filters">
-                <h2>Фильтр товаров</h2>
+                <h2 class="visually-hidden">Фильтр товаров</h2>
                 <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
                     <fieldset class="sort-filter-container">
                         <legend class="filter-label">Сортировка:</legend>
+                        <label class="visually-hidden" for="sort-filter">Сортировка</label>
                         <select class="sort-filter" id="sort-filter">
                             <option class="sort-filter-option">по популярности</option>
                             <option class="sort-filter-option">сначала недорогие</option>
@@ -318,40 +319,50 @@
                         <legend class="filter-label">Жирность</legend>
                         <ul class="fat-content-filter-list">
                             <li class="fat-content-filter-item">
+
                                 <input
-                                    class="fat-content-filter-radio"
+                                    checked="checked"
+                                    class="visually-hidden  fat-content-filter-radio"
                                     type="radio"
                                     name="fat-content-group"
                                     id="filter-0%">
-                                <label class="fat-content-filter-radio-label" for="filter-0%" tabindex="0">0%</label>
+                                <label class="fat-content-filter-radio-label" for="filter-0%">
+                                    0%
+                                </label>
+
                             </li>
                             <li class="fat-content-filter-item">
                                 <input
-                                    class="fat-content-filter-radio"
-                                    checked
-                                    disabled
+                                    class="visually-hidden fat-content-filter-radio"
+                                    checked="checked"
                                     type="radio"
                                     name="fat-content-group"
                                     id="filter-10%">
-                                <label class="fat-content-filter-radio-label" for="filter-10%" tabindex="0">до 10%</label>
+
+                                <label class="fat-content-filter-radio-label" for="filter-10%">
+                                    до 10%
+                                </label>
                             </li>
                             <li class="fat-content-filter-item">
                                 <input
-                                    class="fat-content-filter-radio"
+                                    class="visually-hidden fat-content-filter-radio"
                                     type="radio"
                                     name="fat-content-group"
                                     id="filter-30%">
-                                <label class="fat-content-filter-radio-label" for="filter-30%" tabindex="0">до 30%</label>
+                                <label class="fat-content-filter-radio-label" for="filter-30%">
+                                    до 30%
+                                </label>
                             </li>
                             <li class="fat-content-filter-item">
                                 <input
-                                    class="fat-content-filter-radio"
+                                    class="visually-hidden fat-content-filter-radio"
                                     type="radio"
                                     name="fat-content-group"
                                     id="filter-30%+">
-                                <label class="fat-content-filter-radio-label" for="filter-30%+" tabindex="0">выше 30%</label>
+                                <label class="fat-content-filter-radio-label" for="filter-30%+">
+                                    выше 30%
+                                </label>
                             </li>
-
                         </ul>
                     </fieldset>
 
@@ -360,13 +371,10 @@
                         <ul class="fillers-filter-list">
                             <li class="fillers-filter-item fillers-fillers-filter-chocolate-item">
 
-                                <label
-                                    class="fillers-filter-checkbox-label"
-                                    for="fillers-filter-chocolate"
-                                    tabindex="0">
+                                <label class="fillers-filter-checkbox-label" for="fillers-filter-chocolate">
 
                                     <input
-                                        class="fillers-filter-checkbox fillers-filter-chocolate"
+                                        class="visually-hidden fillers-filter-checkbox"
                                         type="checkbox"
                                         name="сhocolate"
                                         id="fillers-filter-chocolate"
@@ -386,7 +394,7 @@
                                             d="M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z"/>
                                     </svg>
                                     <svg
-                                        class="fillers-filter-checkbox-off-icon visible-checkbox-icon"
+                                        class="fillers-filter-checkbox-off-icon"
                                         width="20"
                                         height="20"
                                         viewbox="0 0 20 20"
@@ -395,22 +403,20 @@
                                         <path
                                             d="M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z"/>
                                     </svg>
-                                    шоколадные
+                                    <span>шоколадные</span>
                                 </label>
                             </li>
                             <li class="fillers-filter-item fillers-fillers-filter-powdered-sugar-item">
 
                                 <label
                                     class="fillers-filter-checkbox-label"
-                                    for="fillers-filter-powdered-sugar"
-                                    tabindex="0">
+                                    for="fillers-filter-powdered-sugar">
                                     <input
-                                        class="fillers-filter-checkbox fillers-filter-powdered-sugar"
+                                        class="visually-hidden fillers-filter-checkbox"
                                         type="checkbox"
                                         name="powdered sugar"
                                         id="fillers-filter-powdered-sugar"
-                                        checked="checked"
-                                        disabled="disabled">
+                                        checked="checked">
 
                                     <svg
                                         class="fillers-filter-checkbox-on-icon"
@@ -426,7 +432,7 @@
                                             d="M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z"/>
                                     </svg>
                                     <svg
-                                        class="fillers-filter-checkbox-off-icon visible-checkbox-icon"
+                                        class="fillers-filter-checkbox-off-icon"
                                         width="20"
                                         height="20"
                                         viewbox="0 0 20 20"
@@ -435,22 +441,18 @@
                                         <path
                                             d="M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z"/>
                                     </svg>
-                                    сахарные присыпки
+                                    <span>сахарные присыпки</span>
                                 </label>
                             </li>
                             <li class="fillers-filter-item fillers-filter-fruits-item">
 
-                                <label
-                                    class="fillers-filter-checkbox-label fillers-fillers-filter-fruits-checkbox-label"
-                                    for="fillers-filter-fruits"
-                                    tabindex="0">
+                                <label class="fillers-filter-checkbox-label" for="fillers-filter-fruits">
 
                                     <input
-                                        class="fillers-filter-checkbox fillers-filter-fruits"
+                                        class="visually-hidden fillers-filter-checkbox"
                                         type="checkbox"
                                         name="fruits"
-                                        id="fillers-filter-fruits"
-                                        disabled="disabled">
+                                        id="fillers-filter-fruits">
                                     <svg
                                         class="fillers-filter-checkbox-on-icon"
                                         width="24"
@@ -465,7 +467,7 @@
                                             d="M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z"/>
                                     </svg>
                                     <svg
-                                        class="fillers-filter-checkbox-off-icon visible-checkbox-icon"
+                                        class="fillers-filter-checkbox-off-icon"
                                         width="20"
                                         height="20"
                                         viewbox="0 0 20 20"
@@ -474,14 +476,14 @@
                                         <path
                                             d="M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z"/>
                                     </svg>
-                                    фрукты
+                                    <span>фрукты</span>
                                 </label>
                             </li>
                             <li class="fillers-filter-item fillers-syrups-item">
 
-                                <label class="fillers-filter-checkbox-label" for="fillers-syrups" tabindex="0">
+                                <label class="fillers-filter-checkbox-label" for="fillers-syrups">
                                     <input
-                                        class="fillers-filter-checkbox fillers-syrups"
+                                        class="visually-hidden fillers-filter-checkbox"
                                         type="checkbox"
                                         name="syrups"
                                         id="fillers-syrups">
@@ -499,7 +501,7 @@
                                             d="M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z"/>
                                     </svg>
                                     <svg
-                                        class="fillers-filter-checkbox-off-icon visible-checkbox-icon"
+                                        class="fillers-filter-checkbox-off-icon"
                                         width="20"
                                         height="20"
                                         viewbox="0 0 20 20"
@@ -508,21 +510,19 @@
                                         <path
                                             d="M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z"/>
                                     </svg>
-                                    сиропы
+                                    <span>сиропы</span>
                                 </label>
                             </li>
                             <li class="fillers-filter-item">
 
                                 <label
                                     class="fillers-filter-checkbox-label fillers-filter-jam-checkbox-label"
-                                    for="filter-jams"
-                                    tabindex="0">
+                                    for="filter-jams">
                                     <input
-                                        class="fillers-filter-checkbox filter-jams"
+                                        class="visually-hidden fillers-filter-checkbox"
                                         type="checkbox"
                                         name="jams"
-                                        id="filter-jams"
-                                        disabled="disabled">
+                                        id="filter-jams">
                                     <svg
                                         class="fillers-filter-checkbox-on-icon "
                                         width="24"
@@ -537,7 +537,7 @@
                                             d="M19.2587 17.3913C19.2587 17.6219 19.1621 17.8431 18.9901 18.0062C18.8181 18.1693 18.5848 18.2609 18.3416 18.2609H2.75124C2.50802 18.2609 2.27475 18.1693 2.10277 18.0062C1.93078 17.8431 1.83416 17.6219 1.83416 17.3913V2.6087C1.83416 2.37807 1.93078 2.1569 2.10277 1.99382C2.27475 1.83074 2.50802 1.73913 2.75124 1.73913H18.2591L19.7081 0.356522C19.2932 0.126574 18.8221 0.00365521 18.3416 0H2.75124C2.02157 0 1.32178 0.274844 0.80582 0.764069C0.289862 1.25329 0 1.91683 0 2.6087V17.3913C0 18.0832 0.289862 18.7467 0.80582 19.2359C1.32178 19.7252 2.02157 20 2.75124 20H18.3416C19.0713 20 19.7711 19.7252 20.287 19.2359C20.803 18.7467 21.0929 18.0832 21.0929 17.3913V8.84348L19.2587 10.5826V17.3913Z"/>
                                     </svg>
                                     <svg
-                                        class="fillers-filter-checkbox-off-icon visible-checkbox-icon"
+                                        class="fillers-filter-checkbox-off-icon"
                                         width="20"
                                         height="20"
                                         viewbox="0 0 20 20"
@@ -546,7 +546,7 @@
                                         <path
                                             d="M17.3913 1.73913C17.6219 1.73913 17.8431 1.83074 18.0062 1.99382C18.1693 2.1569 18.2609 2.37807 18.2609 2.6087V17.3913C18.2609 17.6219 18.1693 17.8431 18.0062 18.0062C17.8431 18.1693 17.6219 18.2609 17.3913 18.2609H2.6087C2.37807 18.2609 2.1569 18.1693 1.99382 18.0062C1.83074 17.8431 1.73913 17.6219 1.73913 17.3913V2.6087C1.73913 2.37807 1.83074 2.1569 1.99382 1.99382C2.1569 1.83074 2.37807 1.73913 2.6087 1.73913H17.3913ZM17.3913 0H2.6087C1.91683 0 1.25329 0.274844 0.764069 0.764069C0.274844 1.25329 0 1.91683 0 2.6087L0 17.3913C0 18.0832 0.274844 18.7467 0.764069 19.2359C1.25329 19.7252 1.91683 20 2.6087 20H17.3913C18.0832 20 18.7467 19.7252 19.2359 19.2359C19.7252 18.7467 20 18.0832 20 17.3913V2.6087C20 1.91683 19.7252 1.25329 19.2359 0.764069C18.7467 0.274844 18.0832 0 17.3913 0V0Z"/>
                                     </svg>
-                                    джемы
+                                    <span>джемы</span>
                                 </label>
                             </li>
                         </ul>
@@ -556,7 +556,7 @@
             </section>
 
             <section class="products-section">
-                <h2>Список мороженого</h2>
+                <h2 class="visually-hidden">Список мороженого</h2>
                 <ul class="products-list">
                     <li class="product-item">
                         <figure class="product-figure">
@@ -834,10 +834,10 @@
 
             </section>
         </main>
-        <footer class="main-footer wrap">
+        <footer class="main-footer wrap ">
             <div class="social-footer">
                 <section class="social-section">
-                    <h2>Давайте дружить</h2>
+                    <h2 class="visually-hidden">Давайте дружить</h2>
                     <ul class="social-list">
                         <li class="social-item">
                             <a class="social-button" href="#">
@@ -988,8 +988,8 @@
                     </ul>
                 </section>
 
-                <section class="service-info-section">
-                    <h2>Служебная информация</h2>
+                <section class="service-info-section catalog-service-info-section">
+                    <h2 class="visually-hidden">Служебная информация</h2>
                     <ul class="service-info-list">
                         <li class="service-info-item">
                             <svg
@@ -1016,8 +1016,8 @@
                     </ul>
                 </section>
 
-                <section class="copyright-section">
-                    <h2>Копирайт</h2>
+                <section class="copyright-section catalog-copyright-section">
+                    <h2 class="visually-hidden">Копирайт</h2>
                     <a
                         class="html-academy"
                         href="https://htmlacademy.ru/intensive/htmlcss"
@@ -1040,7 +1040,7 @@
 
         <div class="feedback-modal-window"></div>
         <section class="feedback-section">
-            <h2>Форма обратной связи</h2>
+            <h2 class="visually-hidden">Форма обратной связи</h2>
             <p class="feedback-header">Мы обязательно вам ответим!</p>
             <button
                 class="feedback-exit-button"
@@ -1080,9 +1080,6 @@
             </form>
         </section>
 
-        <script src="js/checkbox_rule_min.js"></script>
-        <script src="js/checkbox_min.js"></script>
-        <script src="js/radio.js"></script>
         <script src="js/login_min.js"></script>
 
     </body>

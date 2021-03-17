@@ -74,6 +74,19 @@
     outline-width: 2px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -132,24 +145,6 @@ body {
 a {
     color: var(--basic-white);
     cursor: url("../img/cursor.svg"), auto;
-}
-
-.index-container h1,
-.authorization-section h2,
-.copyright-section h2,
-.features-section h2,
-.feedback-section h2,
-.contacts-footer h2,
-.social-section h2,
-.products-section h2,
-.menu h2,
-.search-section h2,
-.service-info-section h2,
-.subscription-section h2,
-/* catalog */
-.basket-header,
-.filters h2 {
-    display: none;
 }
 
 .site-wrapper-1 {
@@ -966,7 +961,6 @@ a {
     position: absolute;
     top: 0px; 
     left: 0px; 
-
 }
 
 .products-list {
@@ -1232,10 +1226,14 @@ a {
 }
 
 /* Footer */
+
 .main-footer{
     padding-bottom: 10px;
 }
 
+.catalog-footer{
+    margin-top: 2px;
+}
 
 .contacts-footer{
     position: relative; 
@@ -1319,6 +1317,10 @@ a {
 .service-info-section{
     margin-left: 26px;
     margin-top: 28px;
+}
+
+.catalog-service-info-section{
+    margin-left: 16px;
 }
 
 .social-section {
@@ -1411,6 +1413,10 @@ a {
 
 .copyright-section {
     margin-top: 18px;
+}
+
+.catalog-copyright-section{
+    margin-top: 14px;
 }
 
 .copyright-text {
@@ -1757,29 +1763,13 @@ a {
     margin-right: 19px;
 }
 
-.fat-content-filter-radio {
-    display: none;
-}
-
 .fat-content-filter-radio-label {
-    box-sizing: border-box;
     position: relative;
-    padding-left: 33px;
     cursor: url("../img/cursor.svg"), auto;
 }
 
-.fat-content-filter-radio-label:focus{
-    outline: none;
-}
-
-.fat-content-filter-radio-label:focus-visible{
-    outline-style: solid;
-    outline-color: var(--btn-gradient-second-color);
-    outline-width: 2px;
-}
-
-.fat-content-filter-radio-label:focus + .fat-content-filter-radio-label:after {
-    opacity: 1;
+.fat-content-filter-radio-label{
+    padding-left: 33px;
 }
 
 .fat-content-filter-radio-label::before {
@@ -1808,29 +1798,38 @@ a {
     top: 4.04px;
 }
 
-.fat-content-filter-radio:checked + .fat-content-filter-radio-label:after {
+.fat-content-filter-radio:focus-visible ~ .fat-content-filter-radio-label{
+    outline-style: solid;
+    outline-color: var(--btn-gradient-second-color);
+    outline-width: 2px;
+}
+
+.fat-content-filter-radio:checked + .fat-content-filter-radio-label:after{
     display: block;
 }
 
-.fat-content-filter-radio:disabled + .fat-content-filter-radio-label:after,
-.fat-content-filter-radio:disabled + .fat-content-filter-radio-label::before{
-    opacity: 0.4;
-}
-
-.fat-content-filter-radio:not(:disabled) + .fat-content-filter-radio-label:hover::before{
+.fat-content-filter-radio-label:hover::before{
     border: 3.52px solid var(--basic-white);
 }
 
-.fat-content-filter-radio:not(:disabled) + .fat-content-filter-radio-label:hover::after{
+.fat-content-filter-radio-label:hover::after{
     background-color: var(--basic-white);
 }
 
-.fat-content-filter-radio:disabled + .fat-content-filter-radio-label{
-    color: var(--btn-hover-background-color);
+.fat-content-filter-radio:disabled + .fat-content-filter-radio-label::before{
+    opacity: 0.4;
     cursor: default;
 }
 
+.fat-content-filter-radio:disabled + .fat-content-filter-radio-label::after{
+    opacity: 0.4;
+    cursor: default;
+}
 
+.fat-content-filter-radio:disabled + .fat-content-filter-radio-label{
+    opacity: 0.4;
+    cursor: default;
+}
 
 /* Fillers-filter */
 
@@ -1859,18 +1858,14 @@ a {
 .fillers-filter-item {
     margin-top: 6px;
     margin-bottom: 9px;
-    cursor: url("../img/cursor.svg"), auto;
 }
 
 .fillers-fillers-filter-chocolate-item {
     margin-right: 20px;
 }
+
 .fillers-fillers-filter-powdered-sugar-item {
     margin-right: 23px;
-}
-
-.fillers-filter-checkbox {
-    display: none;
 }
 
 .fillers-filter-chocolate,
@@ -1879,31 +1874,36 @@ a {
     margin-left: 16px;
 }
 
-.fillers-filter-checkbox-label{
+.fillers-filter-checkbox-label {
     display: block;
     position: relative; 
     cursor: url("../img/cursor.svg"), auto;
-    padding-left: 32px;
     padding-top: 1px;
+    cursor: url("../img/cursor.svg"), auto;
+}
+
+.fillers-filter-checkbox-label span{
+    padding-left: 32px;
 }
 
 .fillers-filter-checkbox-label:focus{
     outline: none;
 }
 
-.fillers-filter-checkbox-label:focus-visible{
+.fillers-filter-checkbox:focus-visible ~ span{
     outline-style: solid;
     outline-color: var(--btn-gradient-second-color);
     outline-width: 2px;
 }
 
-.fillers-fillers-filter-fruits-checkbox-label, .fillers-filter-jam-checkbox-label{
+.fillers-filter-fruits-checkbox-label span, 
+.fillers-filter-jam-checkbox-label span{
     padding-left: 34px;
 }
 
 .fillers-filter-checkbox-off-icon {
-    width: 21px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     margin-right: 12px;
     left: 0;
@@ -1919,29 +1919,49 @@ a {
     position: absolute;
     margin-right: -15px;
     left: 0;
-    top: 1px;
+    top: 0;
     opacity: 0.8;
     fill: var(--basic-white);
     display: none;
 }
 
-.visible-checkbox-icon{
+.fillers-filter-checkbox ~ .fillers-filter-checkbox-off-icon {
     display: block;
 }
 
-.hover-opacity{
+.fillers-filter-checkbox:checked ~ .fillers-filter-checkbox-on-icon {
+    display: block;
+}
+
+.fillers-filter-checkbox:checked ~ .fillers-filter-checkbox-off-icon {
+    display: none;
+}
+
+.fillers-filter-checkbox-label:hover .fillers-filter-checkbox-off-icon{
     opacity: 1;
 }
 
-.disabled-opacity{
+.fillers-filter-checkbox-label:hover .fillers-filter-checkbox-on-icon{
+    opacity: 1;
+}
+
+.fillers-filter-checkbox:disabled ~ .fillers-filter-checkbox-on-icon {
+   opacity: 0.4;
+   cursor: default;
+}
+
+.fillers-filter-checkbox:disabled ~ .fillers-filter-checkbox-off-icon {
     opacity: 0.4;
+    cursor: default;
+ }
+
+.fillers-filter-checkbox:disabled ~ span{
+    opacity: 0.4;
+    cursor: default;
 }
 
-.disabled-color{
-    color: var(--btn-hover-background-color)
-}
-
-.disabled-cursor{
+.fillers-filter-checkbox:disabled ~ .fillers-filter-checkbox-off-icon {
+    opacity: 0.4;
     cursor: default;
 }
 
