@@ -4,7 +4,6 @@ const authorizationButton = document.querySelector(".authorization-button");
 const authorizationForm = document.querySelector(".authorization-form");
 const authorizationSection = document.querySelector(".authorization-section"); 
 
-
 let authorizationIsStorageSupport = true;
 
 try {
