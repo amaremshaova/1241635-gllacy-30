@@ -1271,7 +1271,7 @@ a {
     background-color: var(--feedback-form-background-color);
     border-radius: 16px;
     color: var(--basic-black);
-    padding: 32px 25px 31px;
+    padding: 28px 25px 31px;
     box-sizing: border-box;
     z-index: 3;
     font-size: 14px;
@@ -1292,7 +1292,7 @@ a {
 
 .contacts-working-phone{
     margin: 0; 
-    margin-top: 20px; 
+    margin-top: 23px; 
 }
 
 .contacts-feedback-button {
@@ -1660,7 +1660,7 @@ a {
 
 .sort-arrow-icon {
     position: absolute;
-    top: 13px;
+    bottom: 13px;
     right: 13px;
     fill: var(--icon-arrow-background-color);
 }
